@@ -39,7 +39,7 @@ data['Omschrijving'] = data['Omschrijving'].apply(lambda x:[item for item in str
 
 # Object to string 
 data.Omschrijving = data.Omschrijving.astype('string') 
-#print(data.dtypes)
+print(data.dtypes)
 
 # count words 
 result = Counter()
@@ -47,7 +47,7 @@ result = Counter()
 data_list = []
 data_list = data['Omschrijving']
 print(data_list.str.lower().str.split().apply(result.update))
-#print(result)
+print(result)
 
 # Make a histogram of words 
 counts = Counter(data['Omschrijving'])
